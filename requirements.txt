@@ -1,0 +1,4 @@
+fmpsdk
+python-dotenv
+matplotlib
+numpy
