@@ -157,17 +157,42 @@ if __name__ == "__main__":
     # Environ defaults are ARK's projections for 2027 from 2023.
     ark_projections(
         start_date=datetime.date(
-            year=int(os.environ.get("START_YEAR", 2023)),
+            year=int(
+                os.environ.get(
+                    "START_YEAR",
+                    2023,
+                )
+            ),
             month=1,
             day=1,
         ),
         end_date=datetime.date(
-            year=int(os.environ.get("END_YEAR", 2027)),
+            year=int(
+                os.environ.get(
+                    "END_YEAR",
+                    2027,
+                )
+            ),
             month=12,
             day=31,
         ),
-        expected_price=float(os.environ.get("ARK_EXPECTED_PRICE", 2000)),
-        bear_price=float(os.environ.get("ARK_BEAR_PRICE", 1400)),
-        bull_price=float(os.environ.get("ARK_BULL_PRICE", 2500)),
+        expected_price=float(
+            os.environ.get(
+                "ARK_EXPECTED_PRICE",
+                2000,
+            )
+        ),
+        bear_price=float(
+            os.environ.get(
+                "ARK_BEAR_PRICE",
+                1400,
+            )
+        ),
+        bull_price=float(
+            os.environ.get(
+                "ARK_BULL_PRICE",
+                2500,
+            )
+        ),
         ticker=os.environ.get("TARGET_TICKER"),
     )
